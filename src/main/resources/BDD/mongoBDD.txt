@@ -1,0 +1,15 @@
+{
+    "name": "rakot"
+}
+use admin
+db.createUser(
+    {
+    user : "appAdmin",
+    pwd : passwordPrompt(),
+    roles : 
+    [
+        {role : "readWrite", db : "config"}, "clusterAdmin"
+    ]
+    }
+)
+
